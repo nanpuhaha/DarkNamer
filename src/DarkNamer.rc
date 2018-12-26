@@ -1,0 +1,437 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Korean resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 18, 1\r\n"
+    "#pragma code_page(949)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\DarkNamer.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.kor\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\DarkNamer.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DARKNAMER_DIALOG DIALOGEX 0, 0, 312, 225
+STYLE WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_ACCEPTFILES | WS_EX_APPWINDOW
+CAPTION "DarkNamer"
+MENU IDR_MENU_MAIN
+FONT 10, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "List1",IDC_LIST_FILE,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,0,0,312,139
+    CTEXT           "",IDC_ST_BAR,0,214,312,11,SS_CENTERIMAGE | SS_SUNKEN
+END
+
+IDD_INPUT DIALOGEX 0, 0, 209, 127
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW | WS_EX_STATICEDGE
+CAPTION "입력창"
+FONT 10, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_1,5,23,157,30,ES_MULTILINE | WS_VSCROLL
+    EDITTEXT        IDC_EDIT_2,5,61,157,30,ES_MULTILINE | WS_VSCROLL
+    COMBOBOX        IDC_CB_INPUT,5,107,109,151,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    DEFPUSHBUTTON   "확인",IDOK,120,105,40,17
+    PUSHBUTTON      "취소",IDCANCEL,164,105,40,17
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,0,99,209,1
+    LTEXT           "Static",IDC_STATIC_TITLE,6,8,162,8,SS_CENTERIMAGE
+    LTEXT           "Static",IDC_STATIC_1,163,30,46,14,SS_CENTERIMAGE
+    LTEXT           "Static",IDC_STATIC_2,163,70,46,14,SS_CENTERIMAGE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_TOOLBAR1 TOOLBAR DISCARDABLE  4, 26
+BEGIN
+    BUTTON      IDM_APPLY_CHANGE
+    BUTTON      IDM_NAME_REPLACE
+    BUTTON      IDM_NAME_ADD_FRONT
+    BUTTON      IDM_NAME_ADD_REAR
+    BUTTON      IDM_NAME_EMPTY
+    BUTTON      IDM_NAME_DELPOS
+    BUTTON      IDM_NAME_DELTOKEN
+    BUTTON      IDM_NAME_DEL_TYPE
+    BUTTON      IDM_NAME_DIGIT
+    BUTTON      IDM_NAME_ADDNUM
+END
+
+IDR_TOOLBAR2 TOOLBAR DISCARDABLE  4, 26
+BEGIN
+    BUTTON      IDM_UNDO_CHANGE
+    BUTTON      IDM_CLEAR_LIST
+    BUTTON      IDM_SORT_LIST
+    BUTTON      IDM_MANUAL_CHANGE
+    BUTTON      IDM_EDIT_UP
+    BUTTON      IDM_EDIT_DOWN
+    BUTTON      IDM_NAME_SAMEPATH
+    BUTTON      IDM_EXT_DEL
+    BUTTON      IDM_EXT_ADD
+    BUTTON      IDM_EXT_REPLACE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_TOOLBAR1            BITMAP  DISCARDABLE     "res\\toolbar1.bmp"
+IDR_TOOLBAR2            BITMAP  DISCARDABLE     "res\\toolbar2.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_MAIN MENU DISCARDABLE 
+BEGIN
+    POPUP "파일(&F)"
+    BEGIN
+        MENUITEM "파일 추가하기...\tCtrl+O",    IDM_LIST_ADD
+        MENUITEM SEPARATOR
+        MENUITEM "실제 파일 변경\tCtrl+S",      IDM_APPLY_CHANGE
+        MENUITEM "원래 이름으로\tCtrl+Z",       IDM_UNDO_CHANGE
+        MENUITEM "목록 지우기\tCtrl+L",         IDM_CLEAR_LIST
+        MENUITEM "목록 정렬\tCtrl+A",           IDM_SORT_LIST
+        MENUITEM SEPARATOR
+        MENUITEM "클립보드로 바꿀이름 복사\tCtrl+C", IDM_EXPORT_CLIP
+        MENUITEM "문서파일로 바꿀이름 저장\tCtrl+X", IDM_EXPORT_FILE
+        MENUITEM "바꿀이름 불러오기...\tCtrl+V", IDM_IMPORT_FILE
+        MENUITEM SEPARATOR
+        MENUITEM "클립보드로 경로목록 복사\tCtrl+Shift+C", IDM_EXPORT_CLIP2
+        MENUITEM "문서파일로 경로목록 저장\tCtrl+Shift+X", IDM_EXPORT_FILE2
+        MENUITEM "경로목록 불러오기...\tCtrl+Shift+V", IDM_IMPORT_FILE2
+        MENUITEM SEPARATOR
+        MENUITEM "종료(&X)\tEsc",               IDCANCEL
+    END
+    POPUP "편집(&E)"
+    BEGIN
+        MENUITEM "위로 올림\t<",                IDM_EDIT_UP
+        MENUITEM "아래로 내림\t>",              IDM_EDIT_DOWN
+        MENUITEM SEPARATOR
+        MENUITEM "직접 바꾸기...",              IDM_MANUAL_CHANGE
+    END
+    POPUP "보기(&V)"
+    BEGIN
+        MENUITEM "전체 경로 표시",              IDM_SHOW_FULLPATH
+        MENUITEM "파일 크기 표시",              IDM_SHOW_SIZE
+        MENUITEM "변경 시각 표시",              IDM_SHOW_MODIFYTIME
+        MENUITEM "생성 시각 표시",              IDM_SHOW_CREATETIME
+    END
+    POPUP "기능(&T)"
+    BEGIN
+        MENUITEM "문자열 바꾸기",               IDM_NAME_REPLACE
+        MENUITEM "이름 앞에 추가",              IDM_NAME_ADD_FRONT
+        MENUITEM "이름 뒤에 추가",              IDM_NAME_ADD_REAR
+        MENUITEM SEPARATOR
+        MENUITEM "이름 지우기",                 IDM_NAME_EMPTY
+        MENUITEM "위치 지우기",                 IDM_NAME_DELPOS
+        MENUITEM "묶인곳 지우기",               IDM_NAME_DELTOKEN
+        MENUITEM "숫자 남기기/삭제",            IDM_NAME_DEL_TYPE
+        MENUITEM SEPARATOR
+        MENUITEM "자리수 맞추기",               IDM_NAME_DIGIT
+        MENUITEM "번호 붙이기",                 IDM_NAME_ADDNUM
+        MENUITEM SEPARATOR
+        MENUITEM "확장자 삭제",                 IDM_EXT_DEL
+        MENUITEM "확장자 추가",                 IDM_EXT_ADD
+        MENUITEM "확장자 변경",                 IDM_EXT_REPLACE
+        MENUITEM SEPARATOR
+        MENUITEM "경로 통일하기",               IDM_NAME_SAMEPATH
+    END
+    MENUITEM "버전(&A)",                    IDM_VERSION
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041204b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "DarkNamer MFC 응용 프로그램\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "DarkNamer\0"
+            VALUE "LegalCopyright", "Copyright (C) 2008\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "DarkNamer.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "DarkNamer 응용 프로그램\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x412, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_TB_00               "실제로 적용하기"
+    IDS_TB_01               "문자열 바꾸기"
+    IDS_TB_02               "이름 앞에 추가"
+    IDS_TB_03               "이름 뒤에 추가"
+    IDS_TB_04               "이름 비우기"
+    IDS_TB_05               "위치 지우기"
+    IDS_TB_06               "묶인곳 지우기"
+    IDS_TB_07               "숫자 남기기/삭제"
+    IDS_TB_08               "자리수 맞추기"
+    IDS_TB_09               "번호 붙이기"
+    IDS_TB_10               "원래 이름으로"
+    IDS_TB_11               "목록 지우기"
+    IDS_TB_12               "목록 정렬"
+    IDS_TB_13               "이름 직접 변경"
+    IDS_TB_14               "선택항목 위로"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_TB_15               "선택항목 아래로"
+    IDS_TB_16               "한 폴더에 모으기"
+    IDS_TB_17               "확장자 삭제"
+    IDS_TB_18               "확장자 추가"
+    IDS_TB_19               "확장자 변경"
+    IDS_ADDFRONT            "이름 앞에 아래의 내용을 붙여줍니다."
+    IDS_ADDBACK             "이름 뒤에 아래의 내용을 붙여줍니다."
+    IDS_ADDSTRING           " "
+    IDS_WORKING             "처리중입니다 잠시 기다려 주세요."
+END
+
+#endif    // Korean resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_MAIN MENU DISCARDABLE 
+BEGIN
+    POPUP "File(&F)"
+    BEGIN
+        MENUITEM "Add Files...\tCtrl+O",        IDM_LIST_ADD
+        MENUITEM SEPARATOR
+        MENUITEM "Apply Changes\tCtrl+S",       IDM_APPLY_CHANGE
+        MENUITEM "Undo Changes\tCtrl+Z",        IDM_UNDO_CHANGE
+        MENUITEM "Clear List\tCtrl+L",          IDM_CLEAR_LIST
+        MENUITEM "Sort List\tCtrl+A",           IDM_SORT_LIST
+        MENUITEM SEPARATOR
+        MENUITEM "Copy Names to Clipboard\tCtrl+C", IDM_EXPORT_CLIP
+        MENUITEM "Save Names as a File\tCtrl+X", IDM_EXPORT_FILE
+        MENUITEM "Import Names...\tCtrl+V",     IDM_IMPORT_FILE
+        MENUITEM SEPARATOR
+        MENUITEM "Copy Paths to Clipboard\tCtrl+Shift+C", IDM_EXPORT_CLIP2
+        MENUITEM "Save Paths as a File\tCtrl+Shift+X", IDM_EXPORT_FILE2
+        MENUITEM "Load Paths...\tCtrl+Shift+V", IDM_IMPORT_FILE2
+        MENUITEM SEPARATOR
+        MENUITEM "Exit(&X)\tEsc",               IDCANCEL
+    END
+    POPUP "Edit(&E)"
+    BEGIN
+        MENUITEM "Move Up\t<",                  IDM_EDIT_UP
+        MENUITEM "Move Down\t>",                IDM_EDIT_DOWN
+        MENUITEM SEPARATOR
+        MENUITEM "Edit Name...",                IDM_MANUAL_CHANGE
+    END
+    POPUP "View(&V)"
+    BEGIN
+        MENUITEM "Show Full Path",              IDM_SHOW_FULLPATH
+        MENUITEM "Show File Size",              IDM_SHOW_SIZE
+        MENUITEM "Show Modifed Time",           IDM_SHOW_MODIFYTIME
+        MENUITEM "Show Created Time",           IDM_SHOW_CREATETIME
+    END
+    POPUP "Tools(&T)"
+    BEGIN
+        MENUITEM "Replace...",                  IDM_NAME_REPLACE
+        MENUITEM "Add Prefix...",               IDM_NAME_ADD_FRONT
+        MENUITEM "Add Suffix...",               IDM_NAME_ADD_REAR
+        MENUITEM SEPARATOR
+        MENUITEM "Empty Names",                 IDM_NAME_EMPTY
+        MENUITEM "Delete by Position...",       IDM_NAME_DELPOS
+        MENUITEM "Delete by Brackets...",       IDM_NAME_DELTOKEN
+        MENUITEM "Filter Numbers...",           IDM_NAME_DEL_TYPE
+        MENUITEM SEPARATOR
+        MENUITEM "Unify Digits...",             IDM_NAME_DIGIT
+        MENUITEM "Add Numbers...",              IDM_NAME_ADDNUM
+        MENUITEM SEPARATOR
+        MENUITEM "Empty Extensions",            IDM_EXT_DEL
+        MENUITEM "Add Extensions..",            IDM_EXT_ADD
+        MENUITEM "Edit Extensions...",          IDM_EXT_REPLACE
+        MENUITEM SEPARATOR
+        MENUITEM "Change Folder",               IDM_NAME_SAMEPATH
+    END
+    MENUITEM "About(&A)",                   IDM_VERSION
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_TB_00               "Apply Changes"
+    IDS_TB_01               "Replace"
+    IDS_TB_02               "Add Prefix"
+    IDS_TB_03               "Add Suffix"
+    IDS_TB_04               "Empty Name"
+    IDS_TB_05               "Del. Position"
+    IDS_TB_06               "Del. Brackets"
+    IDS_TB_07               "Filter Numbers"
+    IDS_TB_08               "Unify Digits"
+    IDS_TB_09               "Add Numbers"
+    IDS_TB_10               "Undo Changes"
+    IDS_TB_11               "Clear List"
+    IDS_TB_12               "Sort List"
+    IDS_TB_13               "Edit Name"
+    IDS_TB_14               "Move Up"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_TB_15               "Move Down"
+    IDS_TB_16               "Change Folder"
+    IDS_TB_17               "Empty Ext."
+    IDS_TB_18               "Add Ext."
+    IDS_TB_19               "Edit Ext."
+    IDS_ADDFRONT            "Add the following to the front of the name"
+    IDS_ADDBACK             "Add the following to the back of the name"
+    IDS_ADDSTRING           " "
+    IDS_WORKING             "Working in progress, please wait."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE 18, 1
+#pragma code_page(949)
+#endif //_WIN32
+#include "res\DarkNamer.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.kor\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

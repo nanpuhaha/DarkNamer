@@ -1,0 +1,32 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: DarkNamer - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x412 /fo"Release/DarkNamer.res" /d "NDEBUG" /d "_AFXDLL" "D:\code\VisualStudio\darknamer\DarkNamer.rc"" 
+Creating temporary file "C:\Users\admin\AppData\Local\Temp\RSP10D4.tmp" with contents
+[
+/nologo /entry:"wWinMainCRTStartup" /subsystem:windows /incremental:no /pdb:"Release/DarkNamer.pdb" /machine:I386 /out:"Release/DarkNamer.exe" 
+.\Release\DarkNamer.obj
+.\Release\DarkNamerDlg.obj
+.\Release\DlgInput.obj
+.\Release\EtcFunctions.obj
+.\Release\FOLDERDIALOG.OBJ
+.\Release\StdAfx.obj
+.\Release\DarkNamer.res
+]
+Creating command line "link.exe @C:\Users\admin\AppData\Local\Temp\RSP10D4.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Linking...
+
+
+
+<h3>Results</h3>
+DarkNamer.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
