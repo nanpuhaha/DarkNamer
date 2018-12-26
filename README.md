@@ -44,8 +44,7 @@ DarkNamer was orignally developed by [darkwalker](https://blog.naver.com/darkwal
 
 ### 1) [DarkNamer 08.02.10 소스코드](https://blog.naver.com/darkwalk77/70027450174)
 
-2008. 2. 11. 0:37
-by darkwalker
+> 2008-02-11 0:37 by darkwalker
 
 목록 정렬 버그 수정한 소스코드 입니다. (2018.8월 업데이트)
 
@@ -61,8 +60,7 @@ Visual C++ 6.0 환경에서 MFC기반으로 제작.
 
 ### 2) [파일 이름 일괄 변경 DarkNamer 08.02.10 실행파일 (목록 정렬 버그 수정)](https://blog.naver.com/darkwalk77/70027450806)
 
-2008. 2. 11. 0:58
-by darkwalker
+> 2008-02-11 0:58 by darkwalker
 
 안녕하세요, 실로 오랜만에 글을 올립니다. 벌써 마지막으로 업로드한지 10년이 지났네요.
 몇가지 버그가 있다는 분들이 계셔서 확인해 보니
@@ -97,8 +95,7 @@ by darkwalker
 
 ### 3) [DarkNamer 18.08.30 베타버전 업데이트](https://blog.naver.com/darkwalk77/221349401402)
 
-2018. 8. 30. 23:14
-by darkwalker
+> 2018-08-30 23:14 by darkwalker
 
 안녕하세요, 실로 오랜만에 새로운 버전을 올립니다.
 
